@@ -1,0 +1,47 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+    background-color: #d9e0e7;
+}
+
+.dashboard {
+    background-color: #4071ed;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+.tarjetas{
+    background-color: white;
+    margin: 10px;
+}
+
+.contenido {
+    max-width: 1200px;
+    width: 95%; 
+    margin: 0 auto; 
+    padding: 20px 0;
+}
+
+.titulo {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.tarjetas-container {
+    display: flex; 
+    gap: 15px;
+}
+
+.tarjeta {
+    flex-grow: 1; 
+    padding: 30px 10px;
+    background-color: #d0d0fc;
+    text-align: center;
+    font-size: 1.5em;
+}
