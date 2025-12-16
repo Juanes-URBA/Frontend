@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-oscuro-principal: #35424a;
+    --color-acento: #e5e81d;
+    --color-texto: #333333;
+    --color-fondo: #f4f4f4;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 0 0 20px 0;
+}
+
+.contenedor {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+a {
+    color: var(--color-texto);
+    text-decoration: none;
+}
+
+.boton-principal {
+    height: 38px;
+    background: var(--color-acento);
+    border: 0;
+    padding: 0 20px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+header {
+    background: var(--color-oscuro-principal);
+    color: #ffffff;
+    padding-top: 20px;
+    min-height: 70px;
+    border-bottom: var(--color-acento) 3px solid;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header h1 .resaltado {
+    color: var(--color-acento);
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+header nav ul li {
+    display: block;
+    padding: 8px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header a {
+    color: #ffffff;
+}
+
+header nav a:hover,
+header nav li.actual a {
+    color: var(--color-acento);
+}
+
+#cabecera-principal {
+    position: relative;
+    min-height: 350px;
+    overflow: hidden;
+    color: #ffffff;
+    text-align: center;
+}
+
+#cabecera-principal img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+#cabecera-principal::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(53, 66, 74, 0.65);
+    z-index: 2;
+}
+
+#cabecera-principal .contenedor {
+    position: relative;
+    z-index: 3;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#cabecera-principal h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#cabecera-principal p {
+    font-size: 16px;
+}
+
+#boletin {
+    padding: 15px 0;
+    color: #ffffff;
+    background: var(--color-oscuro-principal);
+}
+
+#boletin .contenedor {
+    display: block;
+}
+
+#boletin h2 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#boletin form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#boletin input[type="email"] {
+    padding: 10px;
+    height: 38px;
+    width: 100%;
+}
+
+#columnas .contenedor {
+    display: block;
+    padding: 20px 10px;
+}
+
+.caja {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.caja img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+#main-column {
+    width: 100%;
+    padding: 0;
+}
+
+#sidebar {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.fondo-oscuro {
+    background-color: var(--color-oscuro-principal);
+    color: #ffffff;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.lista-servicio {
+    padding: 15px;
+    border: #cccccc solid 1px;
+    margin-bottom: 15px;
+    background: #e6e6e6;
+}
+
+#main-column input,
+#main-column textarea,
+#sidebar .fondo-oscuro input,
+#sidebar .fondo-oscuro textarea {
+    width: 100%;
+    padding: 10px;
+    border: #cccccc solid 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: var(--color-acento);
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+
+    .contenedor {
+        max-width: 1200px;
+    }
+
+    header .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul li {
+        display: inline;
+        padding: 0 20px;
+        border-top: none;
+    }
+
+    #boletin .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #boletin h2 {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    #boletin form {
+        flex-direction: row;
+    }
+
+    #boletin input[type="email"] {
+        width: 250px;
+    }
+
+    .boton-principal {
+        width: auto;
+        margin-top: 0;
+    }
+
+    #cabecera-principal {
+        min-height: 450px;
+    }
+
+    #cabecera-principal .contenedor {
+        min-height: 450px;
+    }
+
+    #cabecera-principal h2 {
+        font-size: 55px;
+    }
+
+    #columnas .contenedor {
+        display: flex;
+        gap: 30px;
+    }
+
+    .caja {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    .caja img {
+        width: 90px;
+    }
+
+    #main-column {
+        float: left;
+        width: 65%;
+    }
+
+    #sidebar {
+        float: right;
+        width: 30%;
+    }
+}
