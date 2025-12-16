@@ -5,9 +5,9 @@
 }
 
 :root {
-    --color-oscuro-principal: #35424a;
-    --color-acento: #ff5500;
-    --color-texto: #333333;
+    --color-oscuro-principal: #0c1f29;
+    --color-acento: #3801ff;
+    --color-texto: #1a1717;
     --color-fondo: #f4f4f4;
 }
 
@@ -41,7 +41,7 @@ a {
 
 .boton-principal {
     height: 38px;
-    background: var(--color-acento);
+    background-color: rgb(255, 68, 0) ;
     border: 0;
     padding: 0 20px;
     color: #ffffff;
